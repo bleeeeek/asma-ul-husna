@@ -3,6 +3,7 @@ import { names } from './data/names';
 import { NameCard } from './components/NameCard';
 import Pagination from './components/Pagination';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   const [search, setSearch] = useState('');
@@ -41,8 +42,8 @@ function App() {
   const likedCount = favorites.length;
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen bg-gray-50 relative">
+      <div className="container mx-auto px-4 py-8 relative z-10">
         <Header 
           search={search} 
           setSearch={setSearch} 
@@ -67,6 +68,7 @@ function App() {
           onPageChange={setCurrentPage} 
         />
       </div>
+      <Footer />
     </div>
   );
 }

@@ -1,5 +1,3 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
@@ -21,4 +19,14 @@
   .dark .dark\:border-gray-700 {
     @apply border-gray-700;
   }
+}
+
+footer {
+  background-color: #047857;
+  border-top: 2px solid rgba(34, 197, 94, 1);
+}
+
+footer p {
+  margin: 0;
+  padding: 0.5rem 0;
 }
