@@ -2,13 +2,16 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-green-800 text-white text-center py-2 mt-6 shadow-lg">
+    <footer className="bg-green-900 text-white text-center py-2 mt-6 shadow-lg">
       <div className="max-w-2xl mx-auto">
         <p className="mb-1 text-sm font-semibold">
-          اَلْحَمْدُ لِلَّهِ عَلٰی كُلِّ نِعْمَةٍ وَ اَسْتَغْفِرُالله مِنْ كُلِّ ذَنْبٍ وَ اَسْئَلُهُ مِنْ كُلِّ خَيْرٍ وَ أَعُوذُ بِاللَّهِ مِنْ كُلِّ شَرٍّ
+         وَلِلَّهِ ٱلْأَسْمَآءُ ٱلْحُسْنَىٰ فَٱدْعُوهُ بِهَا ۖ وَذَرُوا۟ ٱلَّذِينَ يُلْحِدُونَ فِىٓ أَسْمَـٰٓئِهِۦ ۚ سَيُجْزَوْنَ مَا كَانُوا۟ يَعْمَلُونَ
         </p>
-        <p className="text-xs">
-          Praise be to Allah for all the blessings. Oh Allah, Forgive all our sins, give us all that is good and keep us away from all that is bad.
+        <p className="text-xs mb-1">
+          Allah has the Most Beautiful Names. So call upon Him by them, and keep away from those who abuse His Names. They will be punished for what they used to do.
+        </p>
+        <p className="text-xs italic">
+          Surah Al-A'raf [7:180]
         </p>
       </div>
     </footer>
@@ -16,3 +19,4 @@ const Footer: React.FC = () => {
 };
 
 export default Footer; 
+
