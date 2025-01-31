@@ -11,21 +11,31 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 33;
 
-  const filteredNames = names.filter(name =>
-    name.transliteration.toLowerCase().includes(search.toLowerCase()) ||
-    name.english.toLowerCase().includes(search.toLowerCase())
-  );
-
-  const totalPages = Math.ceil(filteredNames.length / pageSize);
-  const paginatedNames = filteredNames.slice((currentPage - 1) * pageSize, currentPage * pageSize);
-
+  // Reset to first page when search changes
   useEffect(() => {
-    // Retrieve progress from local storage
+    setCurrentPage(1);
+  }, [search]);
+
+  // Retrieve progress from local storage on mount
+  useEffect(() => {
     const savedProgress = localStorage.getItem('progress');
     if (savedProgress) {
       setFavorites(JSON.parse(savedProgress));
     }
   }, []);
+
+  // Filter names based on search input
+  const filteredNames = names.filter(name =>
+    name.transliteration.toLowerCase().includes(search.toLowerCase()) ||
+    name.english.toLowerCase().includes(search.toLowerCase()) ||
+    name.meaning.toLowerCase().includes(search.toLowerCase())
+  );
+
+  // Calculate total pages based on filtered names
+  const totalPages = Math.ceil(filteredNames.length / pageSize);
+
+  // Calculate paginated names based on filtered results
+  const paginatedNames = filteredNames.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
   const toggleFavorite = (number: number) => {
     setFavorites(prev => {
@@ -62,11 +72,17 @@ function App() {
           ))}
         </div>
 
-        <Pagination 
-          currentPage={currentPage} 
-          totalPages={totalPages} 
-          onPageChange={setCurrentPage} 
-        />
+        {filteredNames.length > 0 ? (
+          <Pagination 
+            currentPage={currentPage} 
+            totalPages={totalPages} 
+            onPageChange={setCurrentPage} 
+          />
+        ) : (
+          <div className="text-center mt-8 text-gray-600">
+            No results found for "{search}"
+          </div>
+        )}
       </div>
       <Footer />
     </div>
