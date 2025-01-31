@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { names } from './data/names';
 import { NameCard } from './components/NameCard';
 import Pagination from './components/Pagination';
@@ -18,12 +18,24 @@ function App() {
   const totalPages = Math.ceil(filteredNames.length / pageSize);
   const paginatedNames = filteredNames.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
+  useEffect(() => {
+    // Retrieve progress from local storage
+    const savedProgress = localStorage.getItem('progress');
+    if (savedProgress) {
+      setFavorites(JSON.parse(savedProgress));
+    }
+  }, []);
+
   const toggleFavorite = (number: number) => {
-    setFavorites(prev =>
-      prev.includes(number)
+    setFavorites(prev => {
+      const newFavorites = prev.includes(number)
         ? prev.filter(n => n !== number)
-        : [...prev, number]
-    );
+        : [...prev, number];
+
+      // Save progress to local storage
+      localStorage.setItem('progress', JSON.stringify(newFavorites));
+      return newFavorites;
+    });
   };
 
   const likedCount = favorites.length;
