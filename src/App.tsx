@@ -66,26 +66,27 @@ function App() {
   const paginatedNames = filteredNames.slice(startIndex, startIndex + pageSize);
 
   return (
-    <div className="min-h-screen bg-gray-50 relative">
-      <div className="container mx-auto px-4 py-8 relative z-10">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <div className="max-w-7xl mx-auto px-4 py-8">
         <Header 
           search={search} 
-          setSearch={setSearch} 
-          likedCount={likedCount}
+          setSearch={setSearch}
+          likedCount={favorites.length}
           totalNames={names.length}
         />
 
-        <div className="overflow-y-auto custom-scrollbar">
+        <div className="mt-8">
           {filteredNames.length > 0 ? (
             <>
-              <div className="my-6">
-                <Pagination 
-                  currentPage={currentPage} 
-                  totalPages={totalPages} 
-                  onPageChange={setCurrentPage} 
-                />
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+              {/* Top pagination */}
+              <Pagination 
+                currentPage={currentPage} 
+                totalPages={totalPages} 
+                onPageChange={setCurrentPage} 
+                className="mb-6"
+              />
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {paginatedNames.map((name) => (
                   <NameCard
                     key={name.number}
@@ -95,6 +96,14 @@ function App() {
                   />
                 ))}
               </div>
+
+              {/* Bottom pagination */}
+              <Pagination 
+                currentPage={currentPage} 
+                totalPages={totalPages} 
+                onPageChange={setCurrentPage} 
+                className="mt-8"
+              />
             </>
           ) : (
             <div className="text-center mt-8 text-gray-600">
