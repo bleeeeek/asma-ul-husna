@@ -25,7 +25,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
         <div className="space-y-4 sm:space-y-6">
           <div className="flex items-center space-x-3 border-b border-emerald-100 dark:border-emerald-800 pb-3">
             <Info className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-600 dark:text-emerald-400" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-emerald-800 dark:text-emerald-400">About Al-Asma ul-Husna</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-emerald-800 dark:text-emerald-400 mt-2">About Al-Asma ul-Husna</h2>
           </div>
           
           <div className="text-gray-600 dark:text-gray-300 space-y-4">

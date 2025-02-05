@@ -38,7 +38,8 @@ export const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onClose, name }) =
 
         {/* Header */}
         <div className="text-center mb-6">
-          <p className="text-4xl font-arabic mb-2" dir="rtl">{name.arabic}</p>
+          
+          <p className="text-4xl font-arabic mb-2 mt-8" dir="rtl">{name.arabic}</p>
           <h2 className="text-2xl font-semibold text-green-600">{name.transliteration}</h2>
           <p className="text-gray-600 text-sm">{name.english}</p>
         </div>

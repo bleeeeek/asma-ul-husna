@@ -1043,7 +1043,7 @@ export const names: Name[] = [
     transliteration: "Al-Muqeet",
     english: "The All Powerful Maintainer",
     reference: {
-      arabic: "وَكَانَ اللّهُ عَلَى كُلِّ شَيْءٍ مُّقِيتًا",
+      arabic: "",
       english: "“And ever is Allah , over all things, a Keeper (Supreme Nourisher/overseer).”",
       citation: "[4:85]"
     },

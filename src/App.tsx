@@ -4,6 +4,7 @@ import { NameCard } from './components/NameCard';
 import Pagination from './components/Pagination';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { QuizModal } from './components/QuizModal';
 
 interface Name {
   number: number;
@@ -26,6 +27,7 @@ function App() {
   const [favorites, setFavorites] = useState<number[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 33;
+  const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
 
   // Reset to first page when search changes
   useEffect(() => {
@@ -103,6 +105,35 @@ function App() {
                 totalPages={totalPages} 
                 onPageChange={setCurrentPage} 
                 className="mt-8"
+              />
+
+              {/* Quiz Button */}
+              <div className="flex justify-center mt-8 mb-6">
+                <button
+                  onClick={() => setIsQuizModalOpen(true)}
+                  className="px-6 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors duration-200 flex items-center space-x-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
+                >
+                  <svg 
+                    className="w-5 h-5" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={2} 
+                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" 
+                    />
+                  </svg>
+                  <span className="ml-2">Test Your Knowledge</span>
+                </button>
+              </div>
+
+              <QuizModal 
+                isOpen={isQuizModalOpen} 
+                onClose={() => setIsQuizModalOpen(false)}
+                likedNames={names.filter(name => favorites.includes(name.number))}
               />
             </>
           ) : (
