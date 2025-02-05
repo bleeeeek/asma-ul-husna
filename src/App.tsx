@@ -75,31 +75,33 @@ function App() {
           totalNames={names.length}
         />
 
-        {filteredNames.length > 0 ? (
-          <>
-            <div className="my-6">
-              <Pagination 
-                currentPage={currentPage} 
-                totalPages={totalPages} 
-                onPageChange={setCurrentPage} 
-              />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-              {paginatedNames.map((name) => (
-                <NameCard
-                  key={name.number}
-                  name={name}
-                  isFavorite={favorites.includes(name.number)}
-                  onToggleFavorite={() => handleToggleFavorite(name.number)}
+        <div className="overflow-y-auto custom-scrollbar">
+          {filteredNames.length > 0 ? (
+            <>
+              <div className="my-6">
+                <Pagination 
+                  currentPage={currentPage} 
+                  totalPages={totalPages} 
+                  onPageChange={setCurrentPage} 
                 />
-              ))}
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                {paginatedNames.map((name) => (
+                  <NameCard
+                    key={name.number}
+                    name={name}
+                    isFavorite={favorites.includes(name.number)}
+                    onToggleFavorite={() => handleToggleFavorite(name.number)}
+                  />
+                ))}
+              </div>
+            </>
+          ) : (
+            <div className="text-center mt-8 text-gray-600">
+              No results found for "{search}"
             </div>
-          </>
-        ) : (
-          <div className="text-center mt-8 text-gray-600">
-            No results found for "{search}"
-          </div>
-        )}
+          )}
+        </div>
       </div>
       <Footer />
     </div>

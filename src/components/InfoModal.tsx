@@ -24,8 +24,8 @@ export const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onClose, name }) =
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
-      <div className="bg-white rounded-xl max-w-lg w-full p-6 relative shadow-2xl transform transition-all">
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center backdrop-blur-sm">
+      <div className="bg-white dark:bg-gray-800 rounded-xl max-w-2xl w-full mx-4 p-4 sm:p-6 relative shadow-2xl max-h-[80vh] sm:max-h-[70vh] overflow-y-auto custom-scrollbar">
         {/* Close button */}
         <button
           onClick={onClose}

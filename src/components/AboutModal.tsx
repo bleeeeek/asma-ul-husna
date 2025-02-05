@@ -11,7 +11,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center backdrop-blur-sm">
-      <div className="bg-white dark:bg-gray-800 rounded-xl max-w-3xl w-full mx-4 p-4 sm:p-8 relative shadow-2xl max-h-[90vh] overflow-y-auto">
+      <div className="bg-white dark:bg-gray-800 rounded-xl max-w-3xl w-full mx-4 p-4 sm:p-8 relative shadow-2xl max-h-[80vh] sm:max-h-[70vh] overflow-y-auto custom-scrollbar">
         <button 
           onClick={onClose} 
           className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
@@ -22,15 +22,15 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
           </svg>
         </button>
         
-        <div className="space-y-6 sm:space-y-8">
-          <div className="flex items-center space-x-3 border-b border-emerald-100 dark:border-emerald-800 pb-4">
+        <div className="space-y-4 sm:space-y-6">
+          <div className="flex items-center space-x-3 border-b border-emerald-100 dark:border-emerald-800 pb-3">
             <Info className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-600 dark:text-emerald-400" />
             <h2 className="text-2xl sm:text-3xl font-bold text-emerald-800 dark:text-emerald-400">About Al-Asma ul-Husna</h2>
           </div>
           
-          <div className="text-gray-600 dark:text-gray-300 space-y-6">
+          <div className="text-gray-600 dark:text-gray-300 space-y-4">
             <div className="prose dark:prose-invert max-w-none">
-              <p className="leading-relaxed">
+              <p className="leading-relaxed text-sm sm:text-base">
                 The journey of memorizing Allah's names is a path to deepening our connection with our Creator. 
                 Each name is a gateway to understanding His infinite perfection and mercy. As we learn and 
                 reflect upon these beautiful names, our love for Allah naturally grows, leading to a stronger 
@@ -38,7 +38,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                 encompasses His Essence, Names, Attributes, and Actions – unique and unmatched in every way.
               </p>
 
-              <p className="leading-relaxed">
+              <p className="leading-relaxed text-sm sm:text-base">
                 While we commonly refer to the 99 Names (Al-Asma ul-Husna), Islamic scholars note that 
                 Allah's beautiful names extend beyond this number. The Qur'an and authentic Sunnah together 
                 reveal over a hundred divine names, each offering unique insights into the majesty and 
