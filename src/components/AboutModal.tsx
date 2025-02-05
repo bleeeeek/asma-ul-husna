@@ -10,8 +10,8 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
-      <div className="bg-white dark:bg-gray-800 rounded-xl max-w-3xl w-full p-8 relative shadow-2xl max-h-[90vh] overflow-y-auto">
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center backdrop-blur-sm">
+      <div className="bg-white dark:bg-gray-800 rounded-xl max-w-3xl w-full mx-4 p-4 sm:p-8 relative shadow-2xl max-h-[90vh] overflow-y-auto">
         <button 
           onClick={onClose} 
           className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
@@ -22,10 +22,10 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
           </svg>
         </button>
         
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           <div className="flex items-center space-x-3 border-b border-emerald-100 dark:border-emerald-800 pb-4">
-            <Info className="w-8 h-8 text-emerald-600 dark:text-emerald-400" />
-            <h2 className="text-3xl font-bold text-emerald-800 dark:text-emerald-400">About Al-Asma ul-Husna</h2>
+            <Info className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-600 dark:text-emerald-400" />
+            <h2 className="text-2xl sm:text-3xl font-bold text-emerald-800 dark:text-emerald-400">About Al-Asma ul-Husna</h2>
           </div>
           
           <div className="text-gray-600 dark:text-gray-300 space-y-6">
