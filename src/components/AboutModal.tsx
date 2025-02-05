@@ -99,4 +99,5 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
   );
 };
 
-export default AboutModal; 
+
+export default  AboutModal; 
