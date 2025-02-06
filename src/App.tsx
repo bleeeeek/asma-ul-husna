@@ -145,6 +145,7 @@ function App() {
         </div>
       </div>
       <Footer />
+      <Analytics />
     </div>
   );
 }
