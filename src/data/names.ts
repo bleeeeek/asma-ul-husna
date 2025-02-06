@@ -38,8 +38,8 @@ export const names: Name[] = [
     transliteration: "Al-Ahad",
     english: "The One/Unique",
     reference: {
-      arabic: "اللَّهُ الصَّمَدُ",
-      english: "Say, \"He is Allah , One\"",
+      arabic: "قُلْ هُوَ اللَّهُ أَحَدٌ",
+      english: "Say, \"He is Allah, [who is] One\"",
       citation: "[112:1]"
     },
     meaning: {
