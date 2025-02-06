@@ -5,6 +5,7 @@ import Pagination from './components/Pagination';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { QuizModal } from './components/QuizModal';
+import { Analytics } from "@vercel/analytics/react";
 
 interface Name {
   number: number;
