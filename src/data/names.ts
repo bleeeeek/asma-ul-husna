@@ -73,8 +73,8 @@ export const names: Name[] = [
       citation: "[96:3]"
     },
     meaning: {
-      arabic: "الواسع الكرم، الذي لا يحدّ كرمه حد.",
-      english: "The Most Generous, whose generosity is boundless."
+      arabic: "الذي لا يوازي كرمه كرم، ولا يعادله في كرمه كريم.",
+      english: "He whose generosity is unmatched, and whose generosity is unmatched."
     }
   },
   {
@@ -298,8 +298,9 @@ export const names: Name[] = [
       citation: "[24:25]"
     },
     meaning: {
-      arabic: "الثابت الوجود، الذي لا شكّ في وجوده.",
-      english: "The Truth, the One whose existence is certain and absolute."
+      arabic: "الذي لا يسع أحد إنكاره، بل يجب إثباته والاعتراف به، لتظاهر الأدلة على وجوده سبحانه",
+      english: "Which no one can deny, but rather it must be proven and acknowledged, because the evidence of His existence, glory be to Him, is evident.",
+     
     }
   },
   {
@@ -544,7 +545,7 @@ export const names: Name[] = [
   },
   {
     number: 36,
-    arabic: "الشَاكِر",
+    arabic:"الشَّاكِر",
     transliteration: "Ash-Shaakir",
     english: "The Grateful",
     reference: {
@@ -568,7 +569,7 @@ export const names: Name[] = [
       citation: "[35:30]"
     },
     meaning: {
-      arabic: "الذي يثيبه على الشكر.",
+      arabic: "الذي يثيب على الشكر",
       english: "The Most Appreciative, the One who rewards those who are grateful."
     }
   },
@@ -1168,8 +1169,8 @@ export const names: Name[] = [
       citation: "[2:115]"
     },
     meaning: {
-      arabic: "الواسع المغفرة.",
-      english: "The All-Encompassing, the One whose forgiveness is vast."
+      arabic: "الواسع الذي يسع خلقه كلهم بالكافية والإفضال والجود والتدبير ، فالله هو الغني الذي وسع رزقه جميع خلقه ، فلا تجد أحداً إلا هو يأكل من رزقه ، ولا يقدر أن يأكل من غير ما رزقه ، ووسعت رحمته كل شيء وغناه كل فقر ، وهو الكثير العطاء الذي يسع لما يُسأل ، وهو المحيط بكل شيء كما في قوله تعالى",
+      english: "The Vast Who encompasses all of His creation with sufficiency, favor, generosity, and management. God is the Rich One whose provision has encompassed all of His creation. You will not find anyone except Him eating from His provision, nor is he able to eat from other than what He has provided him. His mercy encompasses everything and His wealth is all-encompassing. He is the Generous Giver who encompasses what is asked for, and He encompasses everything as in the Almighty’s saying:"
     }
   },
   {
